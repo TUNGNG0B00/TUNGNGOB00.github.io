@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="icon" href="img/favicon.png" sizes="any">
+    <link rel="stylesheet" href="style.css">
+    <script src="confirmation.js" defer></script>
+</head>
+
+<body>
+    <img src="img/Logo.png" alt="Logo" id="logo" height="76" width="80">
+    <nav id="nav">
+        <a href="index.html" >Home</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Video.html">Videos</a>
+    </nav>
+    <div class="container">
+    <h1>What I Have Done</h1>
+        <img src="img/photoofme.jpg" alt="Photo of Me" id="photoofme" width="250" height="390">
+        <p class="aboutme">Throughout my life, I’ve done several
+        activities like being an assistant teacher <br>
+        at a private school where I helped students 
+         wrote poetry and designed pennants for a competition.<br>
+         I also started my own online business selling items 
+         mostly to U.S. customers.<br>
+        Thanks to my experience with online enterprise,
+         I have gained experience in <br>
+         designing a website using software like Ecwid and Wix.
+         However, I realized that there are many <br>
+         things to learn in order to create a website that works 
+         and looks pleasing to users.<br>
+         I have comprised several proven theories and principles 
+         that make a website attractive <br>
+         and user-friendly. I will try to have these principles 
+         attained when creating a website.<br></p>
+    </div>
+        
+    <h2> My Goals for Creating a Good Website</h2>
+        <ul>
+            <li>Visual Hierarchy
+                <ul>
+                    <li>Without a visual hierarchy, the webpage may look confusing with
+                    various elements and bodies of text and most likely distract the users.</li>
+                 </ul>
+            </li>
+            <li>Typography
+                <ul>
+                     <li>It’s best if you stick to 2 typefaces that are legible enough 
+                        for users to skim through effortlessly.</li>
+                </ul>
+            </li>
+            <li> Simplicity or Less is More
+                <ul>
+                    <li>Speaking of skimming,  websites’ bodies of text should be 
+                    succinct and have attractive
+                    typefaces since people have really short attention spans.</li>
+                </ul>
+            </li>   
+            <li>Accessibility
+                <ul>
+                    <li> A good website provides usability for people with 
+                    physical difficulties like visual, motor, and auditory disabilities. </li>
+                </ul>
+            </li>
+            <li> Interactive Design.
+                <ul>
+                    <li>Like its name, an interactive website provides interaction with 
+                        users. An interactive design is often engages and communicates with them by 
+                        using several interactive elements like the one of the websites
+                         I provided below.</li>
+                </ul>
+            </li>
+        </ul> 
+    <h2> My Experience</h2>
+        <ul>
+            <li> Founder of The Alchemist’s Art, an online store that sells 
+            unique and personalized item 
+            for events like anniversary or wedding. 
+            Since the domain to my online store has expired,
+            you could also check my <a href="https://www.etsy.com/shop/TheAlchemistsArt">Etsy store</a>
+            that sells pretty much the same thing.</li>
+             <li>Have a few experiences with designing website using 
+            <a href="https://www.wix.com/">Wix</a>,
+            <a href="https://www.Ecwid.com/">Ecwid</a>,
+            and <a href="https://www.shopify.com/ca">Shopify</a>.</li>   
+       </ul>
+
+    <h2>Gallery</h2>
+       <div class="gallery">
+        <img src="img/image1.jpg" alt="Image 1" width="250" height="350">
+        <img src="img/image2.jpg" alt="Image 2" width="250" height="350">
+        <img src="img/image3.jpg" alt="Image 3" width="250" height="350">
+      </div>
+
+    <h2> Languages I speak</h2>
+       <ol>
+            <li>English</li>
+            <li>Vietnamese</li>
+            <li>Russian</li>
+       </ol>
+    <h2>Levels of Languages</h2>
+    
+        <table>
+             <tr>
+                <th>_</th>
+                <th>B1</th>
+                <th>B2</th>
+                 <th>C1</th>
+            </tr>
+             <tr>
+                <th>English</th>
+                <td></td>
+                <td></td>
+                <td class="check">X</td>
+             </tr>
+             <tr>
+                <th>Vietnamese</th>
+                <td></td>
+                <td class="check">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Russian</th>
+                <td class="check">X</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+    <p>You can follow me on Instagram by clicking the icon below<br>
+       <a href="https://www.facebook.com/thealchemistsart"><img src="img/instaicon.png" alt="instagram logo" height="76" width="80"></a>
+    </p>
+
+  <script>
+function changeColor(secondaryColor,backgroundColor, fontColor) {
+  let body = document.querySelector('body');
+  let footer = document.querySelector('#footer');
+  let paragraphs = document.querySelectorAll('p');
+  let nav = document.querySelector('#nav');
+  let links = document.querySelectorAll('#nav a');
+  let headings = document.querySelectorAll('h1');
+  let buttons = document.querySelectorAll('#colorChanger button');
+
+  body.style.color = fontColor;
+
+  footer.style.backgroundColor = backgroundColor;
+  footer.style.color = fontColor;
+
+  paragraphs.forEach((paragraph) => {
+    paragraph.style.color = fontColor;
+  });
+
+  
+  nav.style.color = fontColor;
+
+  links.forEach((link) => {
+    link.style.color = fontColor;
+  });
+
+  headings.forEach((heading) => {
+    heading.style.color = fontColor;
+  });
+
+  buttons.forEach((button) => {
+    button.style.backgroundColor = secondaryColor;
+ 
+  });
+ 
+}
+  </script>
+
+<div id="colorChanger">
+    <button onclick="changeColor('#b5b5b5','black', 'black')">Default</button>
+    <button onclick="changeColor('#c0bde1','#3e387b', '#3e387b')">Purple</button>
+    <button onclick="changeColor('#e1c1ca', '#631d1e', '#631d1e')">Crimson</button>
+  </div>
+        
+    <menu id="footer">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Video.html">Videos</a></li>
+    </menu>
+
+  </body>
+</html>
