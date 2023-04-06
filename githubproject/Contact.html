@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>My Website</title>
+   <link rel="icon" href="img/favicon.png" sizes="any">
+   <link rel="stylesheet" href="style.css">
+   <script src="validation.js" defer></script>
+
+</head>
+
+<body>
+   <img src="img/Logo.png" alt="Logo" id="logo" height="76" width="80">
+   <nav id="nav">
+      <a href="index.html" >Home</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+      <a href="Video.html">Videos</a>
+  </nav>
+
+  <h1>GET IN TOUCH!</h1>
+  <p>my gmail: ngotung0804@gmail.com</p>
+  <div class="container">
+    <form id="contactForm" action="action_page.php">
+
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="myTextArea">Text Area</label>
+      <textarea id="myTextArea" name="text" rows="4" cols="50"  placeholder="Write here.."></textarea> 
+
+      <input type="submit" value="Submit" id="button">
+
+    </form>
+  </div>
+
+  <script>
+   function changeColor(secondaryColor,backgroundColor, fontColor) {
+     let body = document.querySelector('body');
+     let footer = document.querySelector('#menu');
+     let paragraphs = document.querySelectorAll('p');
+     let submitButton = document.querySelector('#button');
+     let nav = document.querySelector('#nav');
+     let links = document.querySelectorAll('#nav a');
+     let headings = document.querySelectorAll('h1');
+     let buttons = document.querySelectorAll('#colorChanger button');
+     let labels = document.querySelectorAll('#contactForm label');
+  
+   
+     body.style.color = secondaryColor;
+
+     submitButton.style.backgroundColor = secondaryColor;
+
+     footer.style.backgroundColor = backgroundColor;
+     footer.style.color = fontColor;
+   
+     paragraphs.forEach((paragraph) => {
+       paragraph.style.color = fontColor;
+     });
+   
+     
+     nav.style.color = fontColor;
+   
+     links.forEach((link) => {
+       link.style.color = fontColor;
+     });
+   
+     headings.forEach((heading) => {
+       heading.style.color = fontColor;
+     });
+   
+     buttons.forEach((button) => {
+       button.style.backgroundColor = secondaryColor;
+    
+     });
+   
+     labels.forEach((label) => {
+       label.style.color = fontColor;
+    
+     });
+    
+   }
+     </script>
+
+<div id="colorChanger">
+   <button onclick="changeColor('#b5b5b5','black', 'black')">Default</button>
+   <button onclick="changeColor('#c0bde1','#3e387b', '#3e387b')">Purple</button>
+   <button onclick="changeColor('#e1c1ca', '#631d1e', '#631d1e')">Crimson</button>
+ </div>
+ 
+   <menu id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Video.html">Videos</a></li>
+   </menu>
+</body>
+</html>
+

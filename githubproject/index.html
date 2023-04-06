@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <link rel="icon" href="img/favicon.png" sizes="any">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <img src="img/Logo.png" alt="Logo" id="logo" height="76" width="80">
+  <nav id="nav">
+    <a href="index.html" >Home</a>
+    <a href="About.html">About</a>
+    <a href="Contact.html">Contact</a>
+    <a href="Video.html">Videos</a>
+  </nav>
+  <img src="img/homepagepicture.jpg" alt="Web Design Picture" id="homepage" height="768" 
+   width="1024">
+
+<h1>Summary of Me</h1>
+  
+    <p>
+     Hi, I’m Tung! I’m a first-year computer science student at Dalhousie
+     University.<br>I’m very passionate about creating and designing websites.
+     As someone who has a knack for designing and high creativity,<br>
+     I’m looking forward to creating a website that stands out aesthetically 
+     and operates well.<br>
+    </p>
+
+  <audio controls onplay="showConfirm()">
+    <source src="img/ukrainiansong.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <div id="colorChanger">
+    <button onclick="changeColor('#b5b5b5','black', 'black')">Default</button>
+    <button onclick="changeColor('#c0bde1','#3e387b', '#3e387b')">Purple</button>
+    <button onclick="changeColor('#e1c1ca', '#631d1e', '#631d1e')">Crimson</button>
+  </div>
+  
+  <script>
+function changeColor(secondaryColor,backgroundColor, fontColor) {
+  let body = document.querySelector('body');
+  let footer = document.querySelector('#footer');
+  let paragraphs = document.querySelectorAll('p');
+  let nav = document.querySelector('#nav');
+  let links = document.querySelectorAll('#nav a');
+  let headings = document.querySelectorAll('h1');
+  let buttons = document.querySelectorAll('#colorChanger button');
+  let defaultButton = document.querySelector('#colorChanger button:first-of-type');
+
+  body.style.color = fontColor;
+
+  footer.style.backgroundColor = backgroundColor;
+  footer.style.color = fontColor;
+
+  paragraphs.forEach((paragraph) => {
+    paragraph.style.color = fontColor;
+  });
+
+  
+  nav.style.color = fontColor;
+
+  links.forEach((link) => {
+    link.style.color = fontColor;
+  });
+
+  headings.forEach((heading) => {
+    heading.style.color = fontColor;
+  });
+
+  buttons.forEach((button) => {
+    button.style.backgroundColor = secondaryColor;
+ 
+  });
+  
+    }
+  function showConfirm() {
+  if (confirm("Are you sure you want to play this audio?")) {
+   
+  }
+}
+  </script>
+  
+  
+
+<menu id="footer">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="About.html">About</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+  <li><a href="Video.html">Videos</a></li>
+</menu>
+
+
+</body>
+</html>

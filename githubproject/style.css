@@ -1,0 +1,207 @@
+body{
+   font-size: large;
+}
+
+*{
+   padding: 20px;
+}
+
+.container{
+   display: grid;
+   grid-template-areas: 
+   "head head head"
+   "img p p"
+   "img p p";
+}
+
+.container > h1{
+   grid-area: head;
+}
+
+#logo {
+   margin-left: 550px;
+   padding:  20px;
+   border-style: ridge;
+   border-radius: 50%;
+}
+
+#photoofme {
+   margin-left: 80px;
+   padding: 5px;
+   border-radius: 40%;
+   grid-area: img;
+
+}
+
+#aboutme {
+   margin-right: 250px;
+   grid-area: p;
+   
+}
+
+#homepage {
+   text-align: center;
+   padding: 10px;
+   border-radius: 10%;
+   width: 100%;
+}
+
+a {
+   color: black;
+   font-weight: bold;
+ }
+
+ iframe {
+  border-style: ridge;
+  margin-top: auto;
+ } 
+ video {
+   display: block;
+   margin: auto;
+   border-style: ridge;
+  } 
+
+
+table {
+   border-collapse: collapse;
+ }
+ 
+th{
+   border: 1px solid black;
+ }
+         
+td {
+     border: 1px solid black;
+     padding: 25px;
+     background-color: rgb(252, 255, 188);
+ }
+ 
+input[type=text],#myTextArea {
+   width: 10%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: flex;
+   width: 100%;
+   flex-shrink: 0;
+  }
+
+.check {
+   background-color: orange;
+}
+
+
+menu > li > a {
+   padding: 2px;
+   color: white;
+}
+
+h1::first-letter{
+font-size: larger;
+}
+
+img ~ h1 {
+   font-size: 300%;
+ }
+
+h1+p{
+   font-style: italic;
+ }
+menu {
+   background-color: black;
+   width: 110%;
+   margin-left: -5%;
+   margin-bottom: -10%;
+}
+
+.gallery > img {
+   padding: 10px;
+   border-radius: 10%;
+}
+
+#menu {
+  bottom: 100px;
+  position:fixed;
+}
+
+
+/**/
+
+/* Tablet layout*/
+@media screen and (min-width: 400px) and (max-width: 1000px) {
+#homepage {
+    max-width: 100vw;
+    height: 50vh;
+}
+
+#logo {
+   margin-left:45%;
+}
+
+nav {
+   margin-left:30%;
+}
+
+#photoofme {
+   margin: auto;
+   margin-right: 20px;
+}
+
+#video1, #video2 {
+   display: block;
+   margin: auto;
+
+}
+
+}
+
+
+/* Desktop layout */
+ @media screen and (min-width: 1001px) and (max-width: 1500px) {
+  /* Styles for desktop layout go here */
+ 
+#homepage {
+   max-width: 150vw;
+   height: 100vh;
+}
+
+#logo {
+  margin: auto;
+  margin-bottom: -50px;
+}
+
+nav {
+text-align: right;
+}
+
+#video1{
+   display: block;
+
+}
+
+#video2 {
+   display: block;
+   margin: auto;
+}
+
+menu {
+   background-color: black;
+   width: 110%;
+}
+
+#menu {
+   bottom: 200px;
+   position:static;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
